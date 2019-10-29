@@ -7,7 +7,7 @@ all: clean
 $(SHLIB): $(STATLIB)
 
 $(STATLIB):
-	zig build-lib zig/myziglib.zig --bundle-compiler-rt --release-safe --output-dir zig/target
+  zig build-lib zig/myziglib.zig --bundle-compiler-rt --release-safe --output-dir zig/target
 
 clean:
-	rm -Rf $(SHLIB) $(STATLIB) $(OBJECTS) zig-cache zig/target
+  rm -Rf $(SHLIB) $(STATLIB) $(OBJECTS) zig-cache zig/target
