@@ -1,0 +1,6 @@
+^hellozig\.Rproj$
+^\.Rproj\.user$
+^README\.Rmd$
+^LICENSE\.md$
+^src/zig/target
+^src/zig-cache$

@@ -1,0 +1,13 @@
+LIBDIR = zig/target
+STATLIB = $(LIBDIR)/zig/target/libmyziglib.a
+PKG_LIBS = -L$(LIBDIR) -lmyziglib
+
+all: clean
+
+$(SHLIB): $(STATLIB)
+
+$(STATLIB):
+	zig build-lib zig/myziglib.zig --bundle-compiler-rt --release-safe --output-dir zig/target
+
+clean:
+	rm -Rf $(SHLIB) $(STATLIB) $(OBJECTS) zig-cache zig/target

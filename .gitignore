@@ -1,0 +1,8 @@
+.Rproj.user
+src/zig/target
+src/zig-cache
+src/*.a
+src/*.o
+src/*.so
+.Rhistory
+.RData
